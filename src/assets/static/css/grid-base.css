@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav content sidebar'
+    'nav footer footer';
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 80px 1fr 70px;
+}
+
+header,
+footer,
+main,
+aside,
+nav {
+  background-color: steelblue;
+  color: #fff;
+  padding: 20px;
+  border: skyblue 1px solid;
+}
+
+header {
+  grid-area: header;
+  background-color: black;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+  background-color: white;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #02014e;
+}
+
+nav >ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav >ul>li {
+  margin-top: 10px;
+}
+
+ul.mymenu  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+.mymenu li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.mymenu li a:hover:not(.active) {
+  background-color: #8bc089;
+}
+
+.mymenu .active {
+  background-color: #4CAF50;
+}
