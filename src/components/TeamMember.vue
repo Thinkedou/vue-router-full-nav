@@ -3,9 +3,9 @@
         <div class="card">
                 <div class="card-image"></div>
                 <div class="card-text">
-                  <span class="job">Full Stack 🎉</span>
-                  <h2>FirstName & LastName</h2>
-                  <p>verbatim</p>
+                  <span class="job">id : {{$route.params.memberId}}</span>
+                  <h2>{{member.firstName}}  {{member.lastName}}</h2>
+                  <p></p>
                 </div>
                 <div class="card-stats">
                   <div class="stat">
@@ -22,11 +22,23 @@
 </template>
 
 <script>
+
+import {teams} from '@/assets/static/js/appTeams'
+console.log(teams)
+
 export default {
   name: 'TeamMember',
   data:()=>({
-
-  })
+      teams,
+      member:{}
+  }),
+  // created() est executé automatiquement à chaque
+  // appel de ce composant
+  created(){
+      const { memberId } = this.$route.params
+      this.member = this.teams[memberId]
+      console.log('CREATED')
+  }
 }
 </script>
 

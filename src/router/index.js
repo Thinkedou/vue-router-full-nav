@@ -21,16 +21,17 @@ const routes = [
     name: 'rates',
     component: () => import('../components/RatesView.vue')
     },
-    {
-      path: '/teams',
-      name: 'teams',
-      component: () => import( '../components/TeamsView.vue')
+
+      {
+        path: '/teams',
+        name: 'teams',
+        component: () => import( '../components/TeamsView.vue')
     },
     {
-      path: '/member/:memberId',
+      path: '/teams/:memberId',
       name: 'member',
       component: () => import( '../components/TeamMember.vue')
-    }
+  },
 ]
 
 const router = new VueRouter({
