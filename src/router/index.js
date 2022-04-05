@@ -27,7 +27,7 @@ const routes = [
       component: () => import( '../components/TeamsView.vue')
     },
     {
-      path: '/member',
+      path: '/member/:memberId',
       name: 'member',
       component: () => import( '../components/TeamMember.vue')
     }
