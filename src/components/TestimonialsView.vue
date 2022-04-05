@@ -69,5 +69,5 @@ export default {
 </script>
 
 <style scoped>
-@import '../assets/static/css/testimonials.css'
+@import '../assets/static/css/testimonials.css';
 </style>
